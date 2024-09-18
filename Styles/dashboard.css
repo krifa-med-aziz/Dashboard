@@ -235,7 +235,7 @@ a {
 }
 .category .box {
   width: 100%;
-  border-radius: 6px;
+  border-radius: 10px;
   background-color: white;
   overflow: hidden;
 }
@@ -332,7 +332,7 @@ a {
 .draft {
   padding: 20px;
   background-color: white;
-  border-radius: 6px;
+  border-radius: 10px;
   overflow: hidden;
 }
 .draft input,
@@ -345,7 +345,6 @@ a {
   background-color: var(--clr-bg-light2-gray);
   border-radius: 6px;
   caret-color: black;
-
   font-size: 12px;
   font-weight: 500;
 }
@@ -358,7 +357,7 @@ a {
 .targets {
   padding: 20px;
   background-color: white;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 .targets .projects,
 .targets .team,
@@ -468,6 +467,47 @@ a {
   border-color: var(--clr-main-green) transparent transparent transparent;
 }
 /* Target box */
+/* tickets statistic */
+.tickets {
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+}
+.tickets .statistic {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.tickets .statistic .col {
+  text-align: center;
+  border: solid 1px var(--clr-bg-light3-gray);
+  padding: 20px;
+  border-radius: 10px;
+  flex-basis: calc(50% - 10px);
+}
+.tickets .statistic .col:nth-of-type(1) i {
+  color: var(--clr-main-orange);
+}
+.tickets .statistic .col:nth-of-type(2) i {
+  color: var(--clr-main-blue);
+}
+.tickets .statistic .col:nth-of-type(3) i {
+  color: var(--clr-main-green);
+}
+.tickets .statistic .col:nth-of-type(4) i {
+  color: var(--clr-main-red);
+}
+.tickets .statistic .col p {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 0px 5px 0px;
+}
+.tickets .statistic .col span {
+  color: var(--clr-secondary);
+  font-size: 12px;
+}
+/* tickets statistic */
 /* end category section */
 /* end main */
 /* end content */

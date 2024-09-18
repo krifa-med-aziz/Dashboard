@@ -207,7 +207,7 @@ a {
 .content .main h1 {
   display: block;
   font-size: 32px;
-  margin: 0px 0px 20px 0px;
+  margin-bottom: 40px;
   position: relative;
 }
 .content .main h1::before,
@@ -237,6 +237,7 @@ a {
   width: 100%;
   border-radius: 6px;
   background-color: white;
+  overflow: hidden;
 }
 .category .box .welcome {
   padding: 20px 20px 10px 20px;
@@ -286,10 +287,7 @@ a {
   margin-top: 10px;
   color: var(--clr-secondary);
 }
-.category .box .button {
-  padding: 20px;
-}
-.category .box .button a {
+.button a {
   display: block;
   width: fit-content;
   margin-left: auto;
@@ -299,7 +297,10 @@ a {
   border-radius: 6px;
   font-size: 14px;
 }
-.category .box .button a:hover {
+.category .box .button {
+  margin: 20px 20px 20px 0px;
+}
+.button a:hover {
   transition: var(--main-transition);
   background-color: var(--clr-alt-blue);
 }
@@ -327,8 +328,41 @@ a {
   }
 }
 /* welcome box */
-/* end category section */
+/* draft box */
+.draft {
+  padding: 20px;
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.draft h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.draft p {
+  color: var(--clr-secondary);
+  margin-bottom: 20px;
+}
+.draft input,
+.draft textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin-bottom: 20px;
+  outline: none;
+  background-color: var(--clr-bg-light2-gray);
+  border-radius: 6px;
+  caret-color: black;
 
+  font-size: 12px;
+  font-weight: 500;
+}
+.draft textarea {
+  resize: none;
+  min-height: 180px;
+}
+/* draft box */
+/* end category section */
 /* end main */
 /* end content */
 /* END PAGE SECTION */

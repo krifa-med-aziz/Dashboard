@@ -514,6 +514,9 @@ a {
   background-color: white;
   border-radius: 10px;
 }
+.news .title {
+  margin-bottom: 20px;
+}
 .news .col {
   display: flex;
   align-items: center;
@@ -572,6 +575,9 @@ a {
   background-color: white;
   border-radius: 10px;
 }
+.tasks .title {
+  margin-bottom: 20px;
+}
 .tasks .col {
   padding-top: 15px;
   margin-top: 15px;
@@ -609,6 +615,9 @@ a {
   background-color: white;
   border-radius: 10px;
 }
+.search.title {
+  margin-bottom: 20px;
+}
 .search .text {
   display: flex;
   justify-content: space-between;
@@ -624,6 +633,9 @@ a {
   padding: 20px;
   background-color: white;
   border-radius: 10px;
+}
+.uploads .title {
+  margin-bottom: 20px;
 }
 .uploads .col {
   display: flex;
@@ -658,6 +670,127 @@ a {
   margin-right: 10px;
 }
 /* uploads */
+/* progress */
+.progress {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+}
+.progress .title {
+  margin-bottom: 20px;
+}
+.progress img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 160px;
+  opacity: 0.1;
+}
+.progress ul li {
+  margin-top: 25px;
+  padding-left: 35px;
+  position: relative;
+}
+.progress ul li::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: var(--clr-main-blue);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: solid white 2px;
+  outline: 2px var(--clr-main-blue) solid;
+}
+.progress ul li:last-child:before {
+  background-color: white;
+}
+.progress ul li:nth-of-type(4):before {
+  animation: flash infinite 2s;
+}
+@keyframes flash {
+  50% {
+    background-color: white;
+  }
+}
+.progress ul {
+  position: relative;
+}
+.progress ul::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  top: 0;
+  left: 10px;
+  border-left: solid var(--clr-main-blue) 2px;
+}
+@media (max-width: 768px) {
+  .progress img {
+    display: none;
+  }
+}
+/* progress */
+/* reminders */
+.reminders {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.reminders .title {
+  margin-bottom: 25px;
+}
+.reminders .col {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.reminders .col span {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.reminders .col:nth-of-type(1) span {
+  background-color: var(--clr-main-blue);
+}
+.reminders .col:nth-of-type(2) span {
+  background-color: var(--clr-main-green);
+}
+.reminders .col:nth-of-type(3) span {
+  background-color: var(--clr-main-orange);
+}
+.reminders .col:nth-of-type(4) span {
+  background-color: var(--clr-main-red);
+}
+.reminders .col .text p {
+  margin: 0;
+  font-size: 13px;
+}
+.reminders .col .text h3 {
+  font-size: 14px;
+  font-weight: 650;
+}
+.reminders .col .text {
+  padding-left: 15px;
+}
+.reminders .col:nth-of-type(1) .text {
+  border-left: solid 2px var(--clr-main-blue);
+}
+.reminders .col:nth-of-type(2) .text {
+  border-left: solid 2px var(--clr-main-green);
+}
+.reminders .col:nth-of-type(3) .text {
+  border-left: solid 2px var(--clr-main-orange);
+}
+.reminders .col:nth-of-type(4) .text {
+  border-left: solid 2px var(--clr-main-red);
+}
+/* reminders */
 /* end category section */
 /* end main */
 /* end content */

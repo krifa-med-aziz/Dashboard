@@ -133,6 +133,7 @@ a {
 .page .content {
   flex: 1;
   background-color: var(--clr-bg-light-blue);
+  overflow: hidden;
 }
 /* start header */
 .content .header {
@@ -925,9 +926,9 @@ a {
 .projects .title {
   margin-bottom: 20px;
 }
-/* .projects .responsive-table {
+.projects .responsive-table {
   overflow-x: auto;
-} */
+}
 .projects table {
   min-width: 800px;
   width: 100%;

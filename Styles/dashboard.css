@@ -156,6 +156,7 @@ a {
 }
 .content .header .search {
   position: relative;
+  padding: 0;
 }
 .content .header .search::before {
   font-family: var(--fa-style-family-classic);

@@ -15,6 +15,7 @@ a {
   --clr-bg-light1-gray: #f6f6f6;
   --clr-bg-light2-gray: #eeeeee;
   --clr-bg-light3-gray: #ccc;
+  --clr-main-red: #f44336;
   --clr-main-blue: #0075ff;
 }
 ::-webkit-scrollbar {

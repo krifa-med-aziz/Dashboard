@@ -6,24 +6,16 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
-ul,
-li {
-  list-style: none;
-}
 a {
   text-decoration: none;
-  transition: var(--main-transition);
 }
 :root {
   --clr-secondary: #888888;
+  --clr-bg-light-blue: #f0f4f9;
   --clr-bg-light1-gray: #f6f6f6;
   --clr-bg-light2-gray: #eeeeee;
+  --clr-bg-light3-gray: #ccc;
   --clr-main-blue: #0075ff;
-  --clr-bg-light-blue: #f0f4f9;
-  --clr-main-orange: #f59e0b;
-  --clr-main-red: #f44336;
-  --clr-main-green: #22c55e;
-  --main-transition: 0.3s;
 }
 ::-webkit-scrollbar {
   width: 15px;
@@ -39,34 +31,34 @@ a {
 }
 .box {
   width: 100%;
-  border-radius: 10px;
   background-color: white;
   overflow: hidden;
-  padding: 20px;
+  border-radius: 10px;
 }
 .title {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: bold;
 }
 .description {
   font-size: 14px;
   color: var(--clr-secondary);
-  margin: 10px 0px;
+  margin: 15px 0px;
   font-weight: 500;
+  line-height: 1.6;
 }
 .details {
-  padding: 3px 8px;
-  background-color: var(--clr-bg-light2-gray);
+  padding: 4px 10px;
+  background-color: var(--clr-main-blue);
+  color: white;
   font-size: 13px;
   font-weight: 500;
   border-radius: 6px;
-  margin-left: 5px;
 }
 /* END GLOBAL RULES */
-/* start sidebar*/
 .page {
   display: flex;
 }
+/* start sidebar*/
 .page .sidebar {
   width: 200px;
   text-align: center;
@@ -172,6 +164,7 @@ a {
 }
 .content .header .search {
   position: relative;
+  padding: 0;
 }
 .content .header .search::before {
   font-family: var(--fa-style-family-classic);
@@ -243,105 +236,54 @@ a {
   width: 40px;
   background-color: black;
 }
-/* start category */
-.main .projects-info {
+/* start courses info */
+/* start web desing */
+.courses-info {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
-@media (max-width: 576px) {
-  .main .projects-info {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-  .box {
-    padding-top: 30px;
-  }
+.courses-info .image img {
+  width: 100%;
 }
-.main .projects-info .box {
+.courses-info .image {
   position: relative;
 }
-.projects-info .box .team {
-  display: flex;
-  align-items: flex-end;
-  min-height: 80px;
-}
-.projects-info .box img {
-  width: 40px;
-  height: 40px;
+.courses-info .image .avatar img {
+  width: 64px;
+  height: 64px;
+  border: 2px solid white;
   border-radius: 50%;
-  background-color: white;
-  padding: 2px;
-  cursor: pointer;
-}
-.projects-info .box img:hover {
-  z-index: 100;
-}
-.projects-info .box .team img:not(:first-child) {
-  margin-left: -15px;
-}
-.projects-info .box .price,
-.projects-info .box .domain {
-  display: flex;
-  align-items: center;
-  margin-top: 15px;
-  padding-top: 15px;
-  border-top: solid 1px var(--clr-bg-light2-gray);
-}
-.projects-info .box .domain {
-  justify-content: flex-end;
-}
-.projects-info .box .price {
-  justify-content: space-between;
-}
-.projects-info .box .price span {
-  color: var(--clr-secondary);
-  font-size: 14px;
-}
-.projects-info .box .date {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  left: 20px;
+  top: 20px;
+}
+.courses-info .text {
+  padding: 20px;
+}
+.courses-info .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid 1px var(--clr-bg-light2-gray);
+  padding: 15px;
+}
+.courses-info .info span {
   font-size: 13px;
   color: var(--clr-secondary);
+  font-weight: 500;
 }
-.projects-info .box .price .dollar {
-  font-weight: bold;
-}
-.projects-info .box .price .prog-holder {
-  height: 6px;
-  width: 260px;
-  background-color: var(--clr-bg-light2-gray);
-  border-radius: 6px;
-  position: relative;
-}
-.projects-info .box .price .prog-holder .prog {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  border-radius: 6px;
-}
-.projects-info .box .price .prog-holder #red {
-  background-color: var(--clr-main-red);
-}
-.projects-info .box .price .prog-holder #green {
-  background-color: var(--clr-main-green);
-}
-.projects-info .box .price .prog-holder #blue {
-  background-color: var(--clr-main-blue);
+.courses-info .info a {
+  transform: translateY(-26px);
 }
 @media (max-width: 768px) {
-  .projects-info .box {
-    text-align: center;
+  .courses-info {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
-  .projects-info .box .team {
-    justify-content: center;
-  }
-  .projects-info .box .domain {
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
+  .courses-info .image .avatar img {
+    width: 44px;
+    height: 44px;
   }
 }
-/* end category */
+/* end web desing */
+/* end courses info */
